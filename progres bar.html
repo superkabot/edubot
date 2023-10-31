@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>edubot</title>
+    <link rel="stylesheet" href="progresstyle.css">
+</head>
+<body>
+    <div class="processing">
+        <div class="processing-bar" data-bar="85">
+            Processing 85%
+        </div>
+    </div>
+
+    <script>
+        const processing = document.querySelector('.processing-bar');
+
+        setTimeout(() => {
+            processing.style.opacity = 1;
+            processing.style.width = processing.getAttribute('data-bar') + '%';
+        }, 500)
+    </script>
+</body>
+</html>
